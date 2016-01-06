@@ -16,7 +16,7 @@ cw.put_metric_data(
   namespace: 'SES',
   metric_data: [
     {
-      metric_name: 'QuotaUsed',
+      metric_name: 'QuotaUsageRate',
       value: quota.sent_last_24_hours / quota.max_24_hour_send * 100,
       unit: 'Percent'
     },

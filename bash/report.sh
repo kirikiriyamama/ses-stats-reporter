@@ -25,7 +25,7 @@ FILTER`")
 }
 
 report_quota() {
-  put_metric_data 'QuotaUsed' $(aws ses get-send-quota | jq '.SentLast24Hours / .Max24HourSend * 100')
+  put_metric_data 'QuotaUsageRate' $(aws ses get-send-quota | jq '.SentLast24Hours / .Max24HourSend * 100')
 }
 
 report_statistics
